@@ -1,0 +1,166 @@
+/* stylelint-disable selector-id-pattern */
+body {
+  background-color: #fdf9f9;
+  color: #2a3950;
+}
+
+li {
+  list-style-type: none;
+  color: black;
+  font-size: 24px;
+  background-color: #e3f4ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 3px dotted rgb(0, 37, 70);
+}
+
+#modalResults {
+  padding: 30px;
+}
+
+li:first-child {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+ul {
+  padding-right: 15px;
+  margin-right: 1px;
+}
+
+p {
+  text-align: center;
+  font-size: large;
+}
+
+article {
+  margin: 10px;
+  margin-bottom: 2em;
+}
+
+#savedEntries {
+  border-style: solid;
+  border-top: 3px solid rgb(66, 167, 255);
+  border-color: rgb(20, 138, 211);
+  background-color: #cfeafa;
+  border-radius: 2em;
+  margin: 1px;
+}
+
+footer {
+  background:
+    linear-gradient(
+      to left,
+      #0f4269,
+      rgb(1, 174, 204)
+    );
+  padding: 10px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.testimotionals {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.testimotionals .card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  background: #1e2c43;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.testimotionals .card .layer {
+  z-index: 1;
+  position: absolute;
+  top: calc(100% - 2px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background:
+    linear-gradient(
+      to left,
+      #0f4269,
+      rgb(1, 174, 204)
+    );
+  transition: 0.5s;
+}
+
+.testimotionals .card .content {
+  z-index: 2;
+  position: relative;
+}
+
+.testimotionals .card:hover .layer {
+  top: 0;
+}
+
+.testimotionals .card .content p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.testimotionals .card .content .image {
+  width: 80px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.testimotionals .card .content .details h2 {
+  font-size: 14px;
+  color: white;
+}
+
+.testimotionals .card .content .details h2 span {
+  font-size: 18px;
+  color: rgb(104, 192, 255);
+  transition: 0.5s;
+}
+
+.testimotionals .card:hover .content .details h2 span {
+  color: white;
+  position: relative;
+}
+
+/* Card stying for excercise */
+
+.fit-card {
+  width: 106px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  padding: 3px;
+  margin: 10px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: #1c3862;
+  border-color: rgb(0, 203, 203);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+}
+
+.fit-card:hover {
+  background-image: linear-gradient(215deg, #0b324f 0%, rgb(1, 174, 204) 74%);
+  cursor: pointer;
+}
+
+.modal-content {
+  background-image: url("../images/food.gif");
+}

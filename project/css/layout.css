@@ -1,0 +1,545 @@
+.hidden {
+  display: none !important;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 575px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+}
+
+.column-full {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.column-half {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column-halves {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.column-thirds {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+}
+/* Custom menu toggle bars */
+.menu-toggle-bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 250px;
+  height: 55px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+p {
+  justify-content: center;
+  text-align: center;
+}
+
+.h2style {
+  border-bottom: 3px solid rgb(66, 167, 255);
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+
+li {
+  list-style-type: none;
+  font-size: 20px;
+  background-color: #9f9f9f;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#modalResults{
+  padding: 30px;
+}
+
+.modal-buttons{
+  justify-content:flex-end ;
+  align-items: flex-end;
+  margin-left: 225px;
+  padding-left: 150px;
+  padding-bottom:20px ;
+}
+
+#savedfoods{
+  margin: 10px;
+  padding-bottom: 275px;
+}
+
+section{
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+section#calorieTracker {
+  height: 100%;
+}
+
+.bg {
+  width: 1500px;
+  height: 600px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.diagram{
+  height: 600px;
+  width: 800px;
+  margin: 20px;
+}
+
+#gif-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #51489a; /* Change the background color to your preference */
+}
+
+#gif {
+  width: 100%;
+  height: 100%;
+  margin: none;
+}
+
+#calrow{
+  padding-bottom: 1em;
+  margin-bottom: 30px;
+}
+
+#savedEntries{
+  justify-content: center;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.modal{
+  width: 100%;
+}
+
+
+#overlay {
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 3em;
+  padding-top: 3em;
+
+  /* Ensure the overlay is on top of the GIF */
+}
+
+.landingbtn {
+  position: absolute;
+  top: 3.5em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 3em;
+  padding-top: 4em;
+}
+
+#overlay h2 {
+  color: rgb(250, 158, 243);
+  position: absolute;
+  top: -1.75em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Proza Libre", sans-serif;
+  font-family: Tektur, cursive;
+  font-size: 64px;
+  letter-spacing: 2px;
+}
+
+@keyframes flicker {
+  from {
+    text-shadow:
+      0 0 5px #ff4ce1,
+      0 0 10px #ff4ce1,
+      0 0 20px #ff4ce1,
+      0 0 40px #ff4ce1;
+  }
+
+  to {
+    text-shadow:
+      0 0 5px #fe93ec,
+      0 0 10px #fe93ec,
+      0 0 20px #fe93ec,
+      0 0 40px #fe93ec;
+  }
+}
+
+/* (C) ATTACH ANIMATION */
+.flick {
+  animation: flicker 1s ease-in-out infinite alternate;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav .links {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active:hover {
+  background-color: #ffbc48;
+  color: black;
+}
+
+.active {
+  background-color: #182b3a;
+  background-image: linear-gradient(215deg, #053253 0%, rgb(1, 153, 204) 74%);
+    color: white;
+}
+
+.menu-toggle {
+  display: block;
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 568px) {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .column-half {
+    width: 50%;
+    padding-top: 10px;
+  }
+
+  .column-fifths {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 25%;
+  }
+  
+
+  input {
+    width: 400px;
+    height: 55px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  .testimotionals {
+    width: 350px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .testimotionals .card {
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    margin: 0 auto;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .testimotionals .card .layer {
+    z-index: 1;
+    position: absolute;
+    top: calc(100% - 2px);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(to left, orange, tomato);
+    transition: 0.5s;
+  }
+
+  .testimotionals .card .content {
+    z-index: 2;
+    position: relative;
+  }
+
+  .testimotionals .card:hover .layer {
+    top: 0;
+  }
+
+  .testimotionals .card .content p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+  }
+
+  .testimotionals .card .content .image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .testimotionals .card .conte nt .details h2 {
+    font-size: 18px;
+    color: white;
+  }
+
+  .testimotionals .card .content .details h2 span {
+    font-size: 18px;
+    color: purple;
+    transition: 0.5s;
+  }
+
+  .testimotionals .card:hover .content .details h2 span {
+    color: white;
+    position: relative;
+  }
+
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.fit-card {
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  padding: 35px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+  margin: 10px;
+}
+
+.fit-card {
+  font-size: 0.65em;
+  color: #446;
+}
+
+.fit-card:hover{
+background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+}

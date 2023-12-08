@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Project</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/project/css/reset.css">
+  <link rel="stylesheet" href="/project/css/layout.css">
+  <link rel="stylesheet" href="/project/css/styles.css">
+  <link rel="stylesheet" href="/project/css/buttons.css">
+  <link rel="stylesheet" href="/project/css/background-styles.css">
+  <link rel="stylesheet" href="/project/css/cards.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@600&family=Tektur:wght@600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="topnav">
+      <a href="index.html" class="active">HealthFi</a>
+      <div class="links" id="myLinks">
+        <a href="home.html">Home</a>
+        <a href="calcounter.html">Calorie Counter</a>
+        <a href="metabolism.html">Metabolism Calculator</a>
+        <a href="excercise.html">Create a Workout</a>
+        <a href="journey.html">Start Your Health Journey</a>
+      </div>
+      <div class="menu-toggle" onclick="myFunction()">
+        <div class="menu-toggle-bar"></div>
+        <div class="menu-toggle-bar"></div>
+        <div class="menu-toggle-bar"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section id="load-screen">
+        <div class="row">   
+          <div id="gif-container">
+            <img id="gif" src="images/yess.gif" alt="Resizing GIF">
+          </div>
+          <div id="overlay">
+            <h2 class="flick">HealthFi</h2>
+          </div>
+          <div class="landingbtn">
+            <button type="button"  id="getStartedButton" class="glowing-btn"><span class="glowing-txt">Get Started</span></button>
+        </div>
+        </div>
+        </section>
+        <section id="home" class="hidden">
+          <div class="slide-container">
+            <div class="row">
+              <h1 class="h2style"> Welcome to HealthFi </h1>
+              <div class="column-full">
+                <div class="slideshow-container">
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img class="bg" src="/project/images/homepage1.jpeg">
+                    <div class="text"></div>
+                  </div>
+      
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img class="bg" src="/project/images/homepage2.jpeg">
+                    <div class="text"></div>
+                  </div>
+      
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img class="bg" src="/project/images/homepage3.jpg">
+                    <div class="text"></div>
+                  </div>
+      
+                  <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img class="bg" src="/project/images/homepage4.jpeg">
+                    <div class="text"></div>
+                  </div>
+      
+                  <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img class="bg" src="/project/images/homepage5.jpg">
+                    <div class="text"></div>
+                  </div>
+      
+                  <a class="prev" onclick="plusSlides(-1)">&#8592;</a>
+                  <a class="next" onclick="plusSlides(1)">&#8594;</a>
+      
+                </div>
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+              <div class="column-halves">
+                  <article class="card">
+                      <img
+                        class="card__background"
+                        src="images/food.gif"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920"
+                        height="2193"
+                      />
+                      <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                          <h2 class="card__title">Start Health Journey</h2>
+                          <p class="card__description">
+                           Learn where to start your Health Journey and get working towards your fitness goals!
+                          </p>
+                        </div>
+                        <button id="startHealth" class="card__button">Read more</button>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img
+                        class="card__background"
+                        src="images/work.gif"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920"
+                        height="2193"
+                      />
+                      <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                          <h2 class="card__title">Metabolism Calculator</h2>
+                          <p class="card__description">
+                            Find your Total Daily Energy Expenditure in order to find your caloric needs to meet your goals.
+                          </p>
+                        </div>
+                        <button id="meta" class="card__button">Read more</button>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img
+                        class="card__background"
+                        src="images/diet.gif"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920"
+                        height="2193"/>
+                      <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                          <h2 class="card__title">Calories Tracker</h2>
+                          <p class="card__description">
+                              Search for your foods and count your calories that you have consumned throughout your day.
+                          </p>
+                        </div>
+                        <button id="calTrack" class="card__button" >Track Cals</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="column-halves">
+                  <article class="card">
+                      <img
+                        class="card__background"
+                        src="images/excercise.gif"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920"
+                        height="2193"
+                      />
+                      <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                          <h2 class="card__title">Create An Excercise</h2>
+                          <p class="card__description">
+                            Can't figure out any workouts? Use our easy and fun to use excercise creator!
+                          </p>
+                        </div>
+                        <button class="card__button">Read more</button>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img
+                        class="card__background"
+                        src="images/brain.gif"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920"
+                        height="2193"
+                      />
+                      <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                          <h2 class="card__title"> Fitness FAQ Videos</h2>
+                          <p class="card__description">
+                            Checkout our informative health and fitness videos we have recommneded!
+                          </p>
+                        </div>
+                        <button class="card__button">Read more</button>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img
+                        class="card__background"
+                        src="images/landing.gif"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920"
+                        height="2193"/>
+                      <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                          <h2 class="card__title">About HealthFi</h2>
+                          <p class="card__description">
+                           Learn about HealthFi and what we are all about! 
+                          </p>
+                        </div>
+                        <button class="card__button">Read more</button>
+                      </div>
+                    </article>
+                  </div>
+              </div>
+          </section>
+
+          
+        <section id="calorieTracker" class="calorie hidden">
+          <div  class="row">
+            <div class="column-full">
+              <div class="h2style">
+                <h1>Food Calorie Counter</h1>
+              </div>
+              <div class="h2style">
+                <p>Use this to keep track the amount of calories
+                  coming from your food and allows you to keep track
+                  throughout the day so
+                  you can meet your caloric goals!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="calrow" class="row">
+            <div class="column-full">
+              <span class="input">
+                <input type="text" id="searchInput" placeholder="Enter Food">
+              </span>
+                <button class="sub-btn" onclick="search()">Search
+                </button>
+          </div>
+</div>
+     <!-- Modal -->
+          <div class="row">
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+                <div class="column-full" id="modalResults"></div>
+                  <div class="modal-buttons">
+                    <button class="sub-btn saved"onclick="saveResults()">Save</button>
+                    <button class="sub-btn" onclick="deleteResults()">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          <div class="row" id="savedfoods">
+              <h2 class="h2style">Saved Food Entries</h2>
+              <h3>Your recently tracked food items will appear here!</h3>
+              <div id="savedEntries" class="column-thirds">
+          </div>
+      </div>
+          <!-- Recorded Entries -->
+              <div class="column-full" id="recordedEntries">
+              
+              </div>
+          </section>
+
+          <section id="excercise" class="hidden">
+            <div class="row">
+                <h1>Create A Workout</h1>
+                  <div class="column-thirds">
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>            
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+                    <div class="fit-card">
+                      <h3>Trapezius</h3>
+                    </div>
+              </div>
+            </div>
+        </section>
+    </div>
+    <footer class="column-full"> About Us
+        <br> Contact Us
+        <br>FAQ
+      </footer>
+  </main>
+  <script src="/project/js/main.js"></script>
+  <script src="/project/js/data.js"></script>
+</body>
+</html>
