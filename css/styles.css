@@ -50,12 +50,7 @@ article {
 }
 
 footer {
-  background:
-    linear-gradient(
-      to left,
-      #0f4269,
-      rgb(1, 174, 204)
-    );
+  background: linear-gradient(to left, #0f4269, rgb(1, 174, 204));
   padding: 10px;
   margin-top: 50px;
   width: 100%;
@@ -89,12 +84,7 @@ footer {
   height: 100%;
   width: 100%;
   left: 0;
-  background:
-    linear-gradient(
-      to left,
-      #0f4269,
-      rgb(1, 174, 204)
-    );
+  background: linear-gradient(to left, #0f4269, rgb(1, 174, 204));
   transition: 0.5s;
 }
 
@@ -162,5 +152,5 @@ footer {
 }
 
 .modal-content {
-  background-image: url("/images/food.gif");
+  background: url('/images/food.gif');
 }
